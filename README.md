@@ -1,2 +1,0 @@
-# Teamraftaar
-Team Raftaar DTU
