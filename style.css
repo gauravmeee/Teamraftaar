@@ -923,3 +923,76 @@ footer .right
 		margin-bottom: 8px;
 	}
 }
+
+/* Sponsers */
+
+.abtthree
+{
+	width: 100%;
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	background: #ddd;
+}
+.left img
+{
+	width: 250px;
+	display: inline-block;
+	float: left;
+}
+.abtthree .right
+{
+	display: table-cell;
+	vertical-align: middle;
+	width: 80%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	float: left;
+	text-align: center;
+}
+.right img
+{
+	width: 150px;
+}
+.abtthree .left
+{
+	width: 100%;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	float: left;
+}
+.abtthree .container
+{
+	width: 100%;
+	display: table;
+}
+.abtthree .left .contaithree
+{
+	width: 70%;
+	padding-left:15%;
+	padding-right: 15%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.abtthree h3
+{
+	padding-top: 0px;
+	margin-block-start: 0px;
+    margin-block-end: 0px;
+    font-size: 35px;
+	font-family: 'barlow Condensed', sans-serif;
+    letter-spacing: 2px;
+	padding-bottom: 10px;
+}
+.abtthree h2
+{
+	padding-top: 0px;
+	margin-block-start: 0px;
+    margin-block-end: 10px;
+    font-size: 25px;
+	font-family: 'Didact Gothic', sans-serif;
+    letter-spacing: 2px;
+	padding-bottom: 10px;
+}
