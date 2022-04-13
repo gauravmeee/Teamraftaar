@@ -996,3 +996,7 @@ footer .right
     letter-spacing: 2px;
 	padding-bottom: 10px;
 }
+video {
+  height: auto;
+  width: 100%;
+}
