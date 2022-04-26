@@ -526,3 +526,32 @@ footer .right
 	}
 	
 }
+
+/*Vehicles*/
+
+.gallery{
+	max-width: 100%;
+	margin: auto;
+	background: #f2f2f2;
+	overflow: auto;
+}
+
+.images{
+	margin: 1%;
+	border:1px solid #ccc;
+	float:left;
+	width:31%;
+	
+	
+}
+
+.images img{
+	width: 100%;
+	height: auto;
+	
+}
+
+.desc{
+	padding: 15px;
+	text-align: center;
+}
