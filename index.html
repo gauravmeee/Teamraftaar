@@ -33,17 +33,17 @@
 
 <!--Video-->
 <div class="tmr">
-<video class="vdo" autoplay muted onended="deletevideo()" >
-	<source src="tr.mp4" type="video/mp4">
+<video class="vdo" autoplay muted  onended="deletevideo()" >
+	<source src="raftaar.mp4" type="video/mp4">
 </video>
 </div>
 
 <!--Java script-->
 <script>
-var elem = document.getElementsByClassName('vdo').addEventListener('ended',deleteVideo,false);
+var video = document.getElementsByClassName('vdo').addEventListener('ended',deleteVideo,false);
 	function deletevideo(e)
 	{
-    var elem = document.getElementsByClassName('vdo');
+    var video = document.getElementsByClassName('vdo');
     elem.remove();
 }
 </script>
