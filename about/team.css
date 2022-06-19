@@ -144,6 +144,9 @@ nav  /*Nav*/
 	display: inline-block;
 	border: 4px solid #0000001c;
 }
+
+
+
 .member .up
 {
 	width: 92px;
@@ -208,24 +211,9 @@ nav  /*Nav*/
     margin-block-end: 0px;
 	font-style: italic;
 }
-
 /*Faculty*/
 
 .faculty 
-{
-	width: 280px;
-	height: 100px;
-	background: #fff;
-	overflow: hidden;
-	box-shadow: 0px 0px 20px #0000001c;
-	margin-left: 60px;
-	margin-right: 60px;
-	margin-top: 60px;
-	text-align: center;
-	display: inline-block;
-	border: 4px solid #0000001c;
-}
-.faculty .up
 {
 	width: 280px;
 	height: 100px;
@@ -243,6 +231,16 @@ nav  /*Nav*/
     
 
 padding: 10px;
+}
+.faculty .up
+{
+	width: 92px;
+	height: 92px;
+	margin-bottom: 15px;
+	overflow: hidden;
+	float: left;
+	display: inline-block;
+	border: 4px solid #ffffff00;
 }
 .faculty .down
 {
@@ -267,7 +265,6 @@ padding: 10px;
 	width: 92px;
 	
 } 
-
 
 /*Footer*/
 
