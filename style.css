@@ -903,10 +903,10 @@ footer .right /*Footer Right */
 	margin-right: 10%;
 	float: left;
 	text-align: center;
-}
+	
 .right img /*Sponser*/
 {
-	width: 150px;
+	width: 120px; margin-right: 5%;
 }
 .abtthree .left
 {
