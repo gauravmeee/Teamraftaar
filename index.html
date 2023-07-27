@@ -16,7 +16,7 @@
 </head>
 <body style="overflow-x: hidden;">
 
-<!--Navigation Bar-->
+<!------------Navigation Bar----------Navigation Bar----------------Navigation Bar------------------Navigation Bar----------------Navigation Bar--------------------Navigation Bar------------------Navigation Bar--------------->
 <nav>
 	<div class="container">
 		<div class="dropb">
@@ -31,18 +31,76 @@
 	</div>
 </nav>
 
-<!--Video-->
+<!-------Video-------------Video----------------Video--------------Video---------Video----------------------Video-----------------Video-----------------------Video---------------------Video-----------------------Video------->
+
+<!-- Container to hold video and replacement image -->
 <div class="tmr">
-<video class="vdo" autoplay muted  onended="deletevideo()" >
-	<source src="Raftaar.mp4" type="video/mp4">
-</video>
-</div>
+	<video id="videoPlayer" class="vdo" autoplay muted onended="replaceWithImage()">
+	  <source src="Raftaar.mp4" type="video/mp4">	
+	</video>
+	<img id="replacementImage" src="img/trposter.svg">
+  </div>
+  
+<style>
+
+
+
+/* Style for the container holding video and image */
+.tmr {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 0 18% 0);
+}
+
+/* Style for the video and replacement image */
+.vdo,
+#replacementImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Initially hide the replacement image */
+#replacementImage {
+  display: none;
+}
+
+
+</style>
+<!-----------------Javscript to only play 83% Duration of the video and hide rest +  replace the poster after ending of the video----------------------------->
+<script>
+	var video = document.getElementById("videoPlayer");
+	var replacementImage = document.getElementById("replacementImage");
+
+	function checkProgress() {
+		// Video will play 83%
+		var videoDuration = video.duration;
+		var hideDuration = videoDuration * 0.83;      
+
+		// Check if the current time of the video exceeds the hideDuration
+		if (video.currentTime >= hideDuration) {
+			// Hide the video and show the replacement image
+			video.style.display = "none";
+			replacementImage.style.display = "block";        
+
+			// Remove the timeupdate event listener once the replacement image is shown
+			video.removeEventListener("timeupdate", checkProgress);
+		}
+	}
+
+	// Add the timeupdate event listener to start checking progress
+	video.addEventListener("timeupdate", checkProgress);
+</script>
 
 
 
 <section class="top">
 
-	<!--Intro1-->
+	<!--Intro1------------Intro1-----------Intro1------------Intro1---------------------Intro1---------------Intro1------------------Intro1--------------------->
 	<div class="left">
 		<h1>TEAM</h1>
 		<h2>Raftaar</h2>
@@ -56,7 +114,7 @@
 			<a href="https://www.facebook.com/RaftaarDTU/?ref=br_rs" target="_blank"><div class="cir"><i class="fa fa-facebook"></i></div></a>
 		</div>
 	
-	<!--Intro2-->
+	<!-------------Intro2-----------Intro2----------------Intro2----------Intro2-----------Intro2----------------Intro2-------------------------Intro2-->
 	</div>
 	<div class="right">
 		<div class="intro">
@@ -73,7 +131,7 @@
 	</div>
 </section>
 
-<!--About-->
+<!-----------------About----------------------About---------------------About-----------------------------About--------------------------------About--------------About-->
 <section class="about">
 	<div class="hr"></div><h3>About Us</h3><div class="hr"></div>
 	<div class="cont">
@@ -99,7 +157,7 @@
 	</div>
 </section>
 
-<!--Sponsers-->
+<!-----------Sponsers---------------------Sponsers------------------------Sponsers-------------------Sponsers-------------------------Sponsers--------------------Sponsers-->
 <div id="sponsors"></div>
 <section class="abtthree">
 	<div class="container">
@@ -111,7 +169,7 @@
 	</div>
 </section>
 	
-<!--Footer-->
+<!--Footer-------------------Footer----------------------Footer------------------------Footer------------------------------------Footer----------------------------Footer--------->
 <footer>
 	<div class="contup">
 		<center><div class="hr"></div><h3>Contact Us</h3><div class="hr"></div></center>
