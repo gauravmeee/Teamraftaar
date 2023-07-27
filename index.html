@@ -6,6 +6,11 @@
 	<script type="text/javascript" src="js/main.js"></script> <!--JS Main-->
 	<link rel="stylesheet" type="text/css" href="style.css"> <!--CSS-->
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png"> <!--Icon-->
+<!--------------google font for welocme------------------------>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+<!---------------------------------------------------->
 
 	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,7 +21,7 @@
 </head>
 <body style="overflow-x: hidden;">
 
-<!------------Navigation Bar----------Navigation Bar----------------Navigation Bar------------------Navigation Bar----------------Navigation Bar--------------------Navigation Bar------------------Navigation Bar--------------->
+<!------------Navigation Bar----------Navigation Bar----------------Navigation Bar------------------Navigation Bar---------------Navigation Bar--------------->
 <nav>
 	<div class="container">
 		<div class="dropb">
@@ -31,18 +36,23 @@
 	</div>
 </nav>
 
-<!-------Video-------------Video----------------Video--------------Video---------Video----------------------Video-----------------Video-----------------------Video---------------------Video-----------------------Video------->
+<!-------Video-------------Video----------------Video--------------Video---------Video----------------------Video-----------------Video-----------------------Video---------->
 
 <!-- Container to hold video and replacement image -->
 <div class="tmr">
+	
 	<video id="videoPlayer" class="vdo" autoplay muted onended="replaceWithImage()">
 	  <source src="Raftaar.mp4" type="video/mp4">	
 	</video>
+	<div id="videoOverlay"></div> <!-- The gray overlay -->
+	<div id="videoText" >Welcome</div> <!-- The text "Welcome" -->
+	</div>
 	<img id="replacementImage" src="img/trposter.svg">
   </div>
   
-<style>
 
+<style>
+/*--------------------------------------------------------------------------styling video----------------------------------------------------------------------------*/
 
 
 /* Style for the container holding video and image */
@@ -64,6 +74,42 @@
   object-fit: cover;
 }
 
+/* Adjust the position and size of the video */
+#videoPlayer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: 1; /* Ensure video is above the overlay */
+		}
+
+/* New style for the gray overlay */
+#videoOverlay {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(13, 18, 28, 0.572); /* Change the opacity value (0.5) as needed */
+			z-index: 2; /* Ensure overlay is above the video */
+		}
+
+		/* Style for the text container */
+		#videoText {
+			font-family: 'Borel', sans-serif;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			font-size: 50px;
+			font-weight: bold;
+			z-index: 3; /* Ensure text is above the video and overlay */
+		}
+
 /* Initially hide the replacement image */
 #replacementImage {
   display: none;
@@ -71,7 +117,7 @@
 
 
 </style>
-<!-----------------Javscript to only play 83% Duration of the video and hide rest +  replace the poster after ending of the video----------------------------->
+<!---------------------------------Javscript to only play 83% Duration of the video and hide rest +  replace the poster after ending of the video----------------------------->
 <script>
 	var video = document.getElementById("videoPlayer");
 	var replacementImage = document.getElementById("replacementImage");
