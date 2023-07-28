@@ -41,12 +41,11 @@
 <!-- Container to hold video and replacement image -->
 <div class="tmr">
 	
-	<video id="videoPlayer" class="vdo" autoplay muted onended="replaceWithImage()">
+	<video id="videoPlayer" class="vdo" autoplay  muted onended="replaceWithImage()">
 	  <source src="Raftaar.mp4" type="video/mp4">	
 	</video>
 	<div id="videoOverlay"></div> <!-- The gray overlay -->
-	<div id="videoText" >Welcome</div> <!-- The text "Welcome" -->
-	</div>
+	<h1 id="videoText" >Welcome</h1> <!-- The text "Welcome" -->
 	<img id="replacementImage" src="img/trposter.svg">
   </div>
   
@@ -98,17 +97,24 @@
 		}
 
 		/* Style for the text container */
-		#videoText {
+		h1#videoText {
 			font-family: 'Borel', sans-serif;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			color: #fff;
-			font-size: 50px;
+			font-size: 80px;
 			font-weight: bold;
 			z-index: 3; /* Ensure text is above the video and overlay */
+			transition: 0.5s;
 		}
+
+		/*Wlcome Hover*/
+h1#videoText:hover{ -webkit-text-stroke: 0.00px #fff;
+	color: transparent;
+	transition: 0.5s;
+}
 
 /* Initially hide the replacement image */
 #replacementImage {
@@ -244,7 +250,10 @@
 	</div>
 	<div class="contdown">
 		<h2>TEAM RAFTAAR 2022-23</h2>
-		<h4> <b> Designed By </b> :<br> Gaurav Meena  <br> Gyanesh Chaurasia </h4>
+		<h4><b> Designed By </b> :<br> Gaurav Meena 
+		                   <br> Gyanesh Chaurasia </h4>
+		
+
 	</div>
 </footer>
 </body>
